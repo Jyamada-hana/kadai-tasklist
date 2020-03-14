@@ -11,6 +11,14 @@
 |
 */
 
+// デフォルトのコメント部分は省略
+
+Route::get('/', 'tasksController@index');
+
+Route::resource('tasks', 'tasksController');
+
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
