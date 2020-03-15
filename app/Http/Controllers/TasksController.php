@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Task;    // 追加
 
-class tasksController extends Controller
+class TasksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class tasksController extends Controller
     // getでtasks/にアクセスされた場合の「一覧表示処理」
     public function index()
     {
-        $tasks = task::all();
+        $tasks = Task::all();
 
         return view('tasks.index', [
             'tasks' => $tasks,
